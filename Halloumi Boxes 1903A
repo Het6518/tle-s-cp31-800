@@ -1,0 +1,24 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int k;
+        cin>>k;
+       vector<int> arr(n);
+        for(int i =0 ;i<n; i++){
+            cin>>arr[i];
+        }
+        if(k==1 && !is_sorted(arr.begin(), arr.end())) {  //use of vector to declare an array always use this method it is more useful as stl functions can be used now for the question if k is >1 than always the required condition is achieved but if k==1 then you need to check if array is already sorted or not
+            cout<<"NO"<<endl;// here array is sorted or not this stl function can be used is_sorted(arr.begin(),arr.end()) 
+        }
+        else cout<<"YES"<<endl;
+    }
+    return 0;
+}
