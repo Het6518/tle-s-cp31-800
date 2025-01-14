@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t; // Number of test cases
+    cin >> t;
+    while (t--) {
+        int e = 0; // Counter for the number of '.' characters in the string
+        int flag = 0; // Flag to indicate if a specific condition is met
+        int n; // Length of the string
+        
+        cin >> n;
+        string s; // Input string containing characters
+        cin >> s;
+
+        // Iterate through the string
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '.') {
+                e++; // Count the total number of '.' characters
+            }
+
+            // Check for a specific condition where three consecutive '.' appear
+            if (i > 0 && i < n - 1) { // Ensure we are not at the boundaries
+                if (s[i - 1] == '.' && s[i] == '.' && s[i + 1] == '.') {
+                    cout << "2" << endl; // Output 2 if the condition is met
+                    flag = 1; // Set the flag to indicate the condition is met
+                    break; // Exit the loop as the condition is met
+                }
+            }
+        }
+
+        // If the condition is not met, output the total number of '.'
+        if (flag == 0) {
+            cout << e << endl;
+        }
+    }
+    return 0;
+}
