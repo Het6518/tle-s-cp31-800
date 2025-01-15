@@ -1,0 +1,35 @@
+#include <bits/stdc++.h> // Include all standard libraries for input/output and algorithms
+using namespace std;
+
+int main() {
+    int t; // Number of test cases
+    cin >> t; // Read the number of test cases
+
+    while (t--) { // Loop through all test cases
+        int n, k; 
+        cin >> n >> k; // Read the size of the array (n) and the target element (k)
+
+        int flag = 0; // Initialize a flag to check if 'k' exists in the array
+        vector<int> arr(n); // Declare a vector to store the array elements
+
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i]; // Read the ith element of the array
+            if (arr[i] == k) { 
+                // If the current element is equal to 'k', set the flag to 1
+                flag = 1;
+            }
+        }
+
+        // Check the value of the flag to decide the output
+        if (flag == 1) {
+            // If 'k' was found in the array, output "YES"
+            cout << "YES" << endl;
+        } else {
+            // Otherwise, output "NO"
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0; // End of the program
+}
