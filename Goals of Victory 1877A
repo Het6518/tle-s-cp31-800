@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t; 
+    cin >> t; // Read the number of test cases
+    while (t--) {
+        int n;
+        cin >> n; // Read the size of the array (including the missing element)
+
+        int sum = 0; // Variable to store the sum of the given array elements
+        int arr[n - 1]; // Array to store n-1 elements (missing one element)
+
+        // Read the n-1 elements into the array
+        for (int i = 0; i < n - 1; i++) {
+            cin >> arr[i];
+        }
+
+        // Calculate the sum of the array elements
+        for (int i = 0; i < n - 1; i++) {
+            sum = sum + arr[i];
+        }
+
+        // Output the negation of the sum
+        // (This operation is unclear—please clarify if this is a placeholder for some other logic)
+        cout << sum * -1 << endl;
+    }
+    return 0;
+}
